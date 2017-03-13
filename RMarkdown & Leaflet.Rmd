@@ -1,0 +1,22 @@
+---
+title: "R Markdown & Leaflet Assignment"
+author: "Jeffrey Boey"
+date: "March 13, 2017"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, echo=TRUE}
+library(leaflet)
+```
+
+## March 13, 2017
+
+```{r map, echo=FALSE}
+my_map <- leaflet() %>% addTiles()
+
+my_map <- my_map %>% addMarkers(lat = 25.500095, lng= -76.634052, popup = "X Marks The Spot")
+
+my_map
+```
